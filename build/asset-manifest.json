@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/static/js/main.c6f6f06e.chunk.js",
+    "main.js.map": "/static/js/main.c6f6f06e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.803ce63d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.803ce63d.js.map",
+    "static/js/2.33f03d8f.chunk.js": "/static/js/2.33f03d8f.chunk.js",
+    "static/js/2.33f03d8f.chunk.js.map": "/static/js/2.33f03d8f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.33f03d8f.chunk.js.LICENSE.txt": "/static/js/2.33f03d8f.chunk.js.LICENSE.txt",
+    "static/media/img-job.ae5cd738.svg": "/static/media/img-job.ae5cd738.svg",
+    "static/media/netflix.8610e9fa.png": "/static/media/netflix.8610e9fa.png",
+    "static/media/pizza.3bf98382.png": "/static/media/pizza.3bf98382.png",
+    "static/media/port.0a6452ca.png": "/static/media/port.0a6452ca.png",
+    "static/media/video.d48e2181.mp4": "/static/media/video.d48e2181.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.803ce63d.js",
+    "static/js/2.33f03d8f.chunk.js",
+    "static/js/main.c6f6f06e.chunk.js"
+  ]
+}
