@@ -1,12 +1,11 @@
 import React, {useState} from 'react'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
-import Article from '../components/Article'
 import { BG } from '../components/Card/CardElements'
 
 
 
-const Home = () => {    
+const Posts = () => {    
     const [isOpen, setIsOpen] = useState(false)
 
     const toggle = () =>{
@@ -19,11 +18,12 @@ const Home = () => {
             <BG>
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar  toggle={toggle}/>
-            <Article />
+            
             </BG>
-                         
+
+             
        </>
     )
 }
 
-export default Home
+export default Posts

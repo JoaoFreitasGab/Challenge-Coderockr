@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { SidebarContainer,
          Icon,
          CloseIcon,
@@ -6,10 +6,16 @@ import { SidebarContainer,
          SidebarMenu,
          SidebarLink,
          SideBtnWrap,
-         SidebarRoute
+ 
         } from './SidebarElements' 
+import Form from '../Form'
+import Popup from '../Popup'
+
 
 const Sidebar = ({isOpen,toggle}) => {
+
+   
+    const [buttonPopup, setButtonPopup] = useState(false);
     return (
         <SidebarContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle}>
@@ -20,15 +26,15 @@ const Sidebar = ({isOpen,toggle}) => {
                     <SidebarLink onClick={toggle} to="posts">
                        Posts
                     </SidebarLink>
-                    <SidebarLink onClick={toggle} to="contact">
-                        Contact
-                    </SidebarLink>
+                    <SidebarLink onClick={()=> setButtonPopup(true)} >Contact</SidebarLink>
+                   
+                    <Popup trigger={buttonPopup} setTrigger = {setButtonPopup }>
+                     <Form />   
+                    </Popup>
                    
                 </SidebarMenu>
                <SideBtnWrap>
-                    {/* <SidebarRoute to='/'>
-                        Sign In
-                    </SidebarRoute> */}
+                   
                 </SideBtnWrap>
             </SidebarWrapper>
         </SidebarContainer>

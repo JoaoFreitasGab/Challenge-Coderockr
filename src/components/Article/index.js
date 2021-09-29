@@ -1,16 +1,33 @@
-import React from 'react'
-import {ArticleBg} from './ArticleElements'
+import React, { useEffect, useState } from 'react';
+import PostCard from '../Card/index'
+import axios from 'axios';
+
 
 const Article = () => {
-    return (
-    <>
-      <ArticleBg>
-          <h2>qwdqwdqwd</h2>
+  const [posts, setPosts] = useState([]);
 
-      </ArticleBg>
-    </>
-    
-    )
-}
+  useEffect(() => {
+    axios.get('http://localhost:5000/posts?')
+      .then((response) => {
+        setPosts(response.data);
+      });
+  }, []);
+  return (
+
+    <div
+      style={{
+        maxWidth: 800,
+        margin: '30px auto',
+      }}
+    >
+      {posts.map((post) => (
+        <PostCard post={post} />
+        
+  
+      ))}
+    </div>
+   
+  );
+};
 
 export default Article

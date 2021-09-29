@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import { Modal } from '../Modal/Modal'
 import {FaBars} from 'react-icons/fa'
 import {
     Nav,
@@ -9,16 +8,15 @@ import {
     NavMenu,
     NavItem,
     NavLinks,
-  
 } from './NavbarElements'
+import Form from '../Form'
+import Popup from '../Popup'
 
-/* import ModalForm from './component/ModalForm'; */
+
 
         const Navbar = ({toggle}) => {
-            const [showModal, setShowModal] = useState(false);
-            const openModal = () => {
-                setShowModal(prev => !prev);
-              };
+            const [buttonPopup, setButtonPopup] = useState(false);
+         
     return (
         <>
             <Nav>
@@ -33,8 +31,13 @@ import {
                             <NavLinks to="Posts">Posts</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks onClick={openModal}>Contact</NavLinks>   
-                            <Modal showModal={showModal} setShowModal={setShowModal} />
+                            <NavLinks onClick={() => setButtonPopup(true)}>Contact</NavLinks> 
+                               <Popup trigger={buttonPopup} setTrigger = {setButtonPopup}>
+                               <Form />   
+                                </Popup>
+
+                  
+                         
                          
                         </NavItem>
                        
