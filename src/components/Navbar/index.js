@@ -22,13 +22,13 @@ import Popup from '../Popup'
             <Nav>
                 <NavbarContainer>
                     
-                    <NavLogo to="home">Rockr Blog</NavLogo>
+                    <NavLogo to="/">Rockr Blog</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="Posts">Posts</NavLinks>
+                            <NavLinks to="/">Posts</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks onClick={() => setButtonPopup(true)}>Contact</NavLinks> 

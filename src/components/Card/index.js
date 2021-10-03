@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 import {PostContainer,
@@ -8,13 +9,12 @@ import {PostContainer,
         PostTitle,
         PostParagraph,
         Footer,
-        Button
 
         } from './CardElements'
 
         
 
-const PostCard = ({ post}) => (
+const PostCard = ({post}) => (
  
  
  
@@ -28,13 +28,8 @@ const PostCard = ({ post}) => (
       <PostTitle >{post.title}</PostTitle>
       <PostParagraph >{post.article.substring(0,200)+ '...'}</PostParagraph> 
       <Footer> 
-          
+      <Link to={`/posts/${post.id}`}>dqwdqwd</Link>
      
-      <Button post= {post.title}  >
-        
-
-      </Button>
-      
       </Footer>
     </PostInfo>
    

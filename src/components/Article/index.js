@@ -23,7 +23,6 @@ const Article = () => {
       {posts.map((post) => (
         <PostCard post={post} />
         
-  
       ))}
     </div>
    
