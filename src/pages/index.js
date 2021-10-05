@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
-import Article from '../components/Article'
+import Article from '../components/ManipulacaoApi'
 import { BG } from '../components/Card/CardElements'
 
 
