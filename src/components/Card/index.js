@@ -9,16 +9,17 @@ import {PostContainer,
         PostTitle,
         PostParagraph,
         Footer,
+        
 
         } from './CardElements'
 
         
-
+       
+ 
 const PostCard = ({post}) => (
  
  
- 
-  
+    
   <PostContainer >
     <PostImg
       src={post.imageUrl}
@@ -28,11 +29,10 @@ const PostCard = ({post}) => (
       <PostTitle >{post.title}</PostTitle>
       <PostParagraph >{post.article.substring(0,200)+ '...'}</PostParagraph> 
       <Footer> 
-      <Link to={`/posts/${post.id}`}>dqwdqwd</Link>
-     
+      <Link to={`/posts/${post.postId}`}
+      >Ver todo conteúdo</Link>
       </Footer>
     </PostInfo>
-   
   </PostContainer>
   
 );

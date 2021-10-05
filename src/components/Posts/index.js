@@ -1,49 +1,26 @@
-import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import useApi from '../Posts/utils/useApi';
+import React from 'react'
+import { useSelector } from 'react-redux'
 
+const Posts = ({ match }) => {
+  const { postId } = match.params
 
+  const post = useSelector(state => state.posts.find(post => post.id === postId)
+  )
 
-const initialValue = {
-  author: '',
-  url: '',
-  imageUrl: '',
-
-};
-
-const Posts = ({ id }) => {
-  const history = useHistory();
-  const [load, loadInfo] = useApi({
-    url: `/posts/${id}`,
-    method: 'get',
-  });
-
-  const [save, saveInfo] = useApi({
-    url: id ? `/posts/${id}` : '/posts',
-    method: id ? 'put' : 'post',
-    onCompleted: (response) => {
-      if (!response.error) {
-        history.push('/');
-      }
-    },
-  });
-
-  useEffect(() => {
-    if (id) {
-      load();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id]);
-
-  
-
-  const values = id ? loadInfo.data : initialValue;
+  if (!post) {
+    return (
+      <section>
+        <h2>Post not found!</h2>
+      </section>
+    )
+  }
 
   return (
-    <div>
-    <div>{id.author}</div>
-    </div>
-  );
-};
-
+    <section>
+      <article>
+        <h2>{post.author}</h2>
+      </article>
+    </section>
+  )
+}
 export default Posts;

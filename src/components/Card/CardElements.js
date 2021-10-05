@@ -10,17 +10,19 @@ export const BG = styled.div`
 export const PostContainer = styled.div`
     display: flex;
     padding: 15px;
-    align-items: flex-start;
     background-color: white;
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
+    
+    
+    
 `
 
 
 export const PostImg = styled.img`
     max-width: 250px;
-    margin-right: 20px;
-    padding: -30px;
+    margin: -15px 20px -15px -15px;
+    
 `
 
 
@@ -52,9 +54,7 @@ export const PostTitle = styled.h1`
 
 
 export const Footer = styled.footer`
-
+        float: right;
+        text-decoration: none;
 `
 
-export const Button = styled.button`
-
-`
