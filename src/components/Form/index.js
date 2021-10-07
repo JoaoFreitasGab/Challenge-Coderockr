@@ -1,5 +1,6 @@
 import React from 'react'
 import './Form.css'
+import {RiSendPlane2Fill} from 'react-icons/ri'
 
 const Form = () => {
     return (
@@ -24,7 +25,7 @@ const Form = () => {
                <textarea className="form-text" rows="5" placeholder="Hello..."></textarea>
                </label>
                </form>
-               <button className="form-btn">Submit</button>
+               <button className="form-btn"><RiSendPlane2Fill/>  Submit</button>
                                      
         </div>
     )

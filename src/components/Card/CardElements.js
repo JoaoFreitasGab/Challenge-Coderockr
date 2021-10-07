@@ -14,8 +14,6 @@ export const PostContainer = styled.div`
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
     
-    
-    
 `
 
 

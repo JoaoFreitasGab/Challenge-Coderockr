@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useParams,
+ 
 
 } from 'react-router-dom';
 import PagesIndex from './index';

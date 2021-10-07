@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
-import Article from '../components/ManipulacaoApi'
 import { BG } from '../components/Card/CardElements'
+import App from '../App'
 
 
 
@@ -19,7 +19,7 @@ const Home = () => {
             <BG>
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar  toggle={toggle}/>
-            <Article />
+            <App />
             </BG>
                          
        </>

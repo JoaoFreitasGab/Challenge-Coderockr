@@ -1,15 +1,34 @@
-import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom'
-import Home from './pages';
+import React, { useEffect, useState } from 'react';
+import PostCard from '../src/components/Card'
+import axios from 'axios';
+import { useParams } from 'react-router';
 
-function App() {
-
+const App = () => {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:5000/posts?')
+      .then((response) => {
+        setPosts(response.data);
+      });
+  }, []);
   return (
-    <Router>
-      <Home />  
-    </Router>
-    
-  );
-}
 
-export default App;
+    <div
+      style={{
+        maxWidth: 800,
+        margin: '30px auto',
+        
+      }}
+    >
+      {posts.map((post) => (
+        <PostCard post={post} />
+        
+      ))}
+
+      
+    </div>
+   
+  );
+};
+
+export default App
